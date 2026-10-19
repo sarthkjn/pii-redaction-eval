@@ -1,6 +1,6 @@
 # PII Redaction Evaluator
 
-[![CI](https://github.com/sarthkjn/pii-redaction-eval/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_GITHUB_USERNAME/pii-redaction-eval/actions/workflows/ci.yml)
+[![CI](https://github.com/sarthkjn/pii-redaction-eval/actions/workflows/ci.yml/badge.svg)](https://github.com/sarthkjn/pii-redaction-eval/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
