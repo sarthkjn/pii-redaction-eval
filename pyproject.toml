@@ -1,0 +1,21 @@
+[project]
+name = "pii-redaction-eval"
+version = "1.0.0"
+description = "Measure and improve how well a redaction engine catches PII in customer-service text."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Browser tests are slow and need Chromium, so they run only when asked: pytest -m e2e
+addopts = "-m 'not e2e'"
+markers = ["e2e: end-to-end browser tests against the Streamlit dashboard"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
