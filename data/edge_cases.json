@@ -1,37 +1,667 @@
 {
-  "generated_by": "hand-written seed set",
+  "generated_by": "claude-haiku-5-5",
   "generated_on": "2026-10-19",
-  "description": "Starter set of hard cases for PII redaction. Fictional data only. Replace or extend it by running scripts/generate_edge_cases.py with your own API key.",
+  "description": "LLM-generated hard cases for PII redaction. Fictional data only.",
   "cases": [
-    {"text": "my card number is four one one one one one one one one one one one one one one one", "pii": [{"type": "CREDIT_CARD", "value": "four one one one one one one one one one one one one one one one"}], "note": "Card number spoken as words"},
-    {"text": "you can call me at two one two, five five five, zero one four seven", "pii": [{"type": "PHONE_NUMBER", "value": "two one two, five five five, zero one four seven"}], "note": "Phone number spoken as words"},
-    {"text": "email me at priya dot shah at gmail dot com", "pii": [{"type": "EMAIL_ADDRESS", "value": "priya dot shah at gmail dot com"}], "note": "Email written out in words"},
-    {"text": "it's jdoe88 at outlook dot com, all lowercase", "pii": [{"type": "EMAIL_ADDRESS", "value": "jdoe88 at outlook dot com"}], "note": "Spoken email, no name"},
-    {"text": "The card is 5555-5555-5555-4444 and it expires next month.", "pii": [{"type": "CREDIT_CARD", "value": "5555-5555-5555-4444"}], "note": "Card with dashes"},
-    {"text": "Use my Mastercard 2223 0031 2200 3222 for the refund.", "pii": [{"type": "CREDIT_CARD", "value": "2223 0031 2200 3222"}], "note": "Newer 2-series Mastercard range"},
-    {"text": "Social is 536 22 1847, no dashes.", "pii": [{"type": "US_SSN", "value": "536 22 1847"}], "note": "SSN with spaces"},
-    {"text": "ssn five three six, two two, one eight four seven", "pii": [{"type": "US_SSN", "value": "five three six, two two, one eight four seven"}], "note": "SSN spoken as words"},
-    {"text": "Reach me on +44 20 7946 0958 after 6pm London time.", "pii": [{"type": "PHONE_NUMBER", "value": "+44 20 7946 0958"}, {"type": "LOCATION", "value": "London"}], "note": "UK phone number"},
-    {"text": "My direct line is (973) 555-0182 ext. 214.", "pii": [{"type": "PHONE_NUMBER", "value": "(973) 555-0182"}], "note": "Phone with extension"},
-    {"text": "Please wire it to DE89 3704 0044 0532 0130 00.", "pii": [{"type": "IBAN_CODE", "value": "DE89 3704 0044 0532 0130 00"}], "note": "German IBAN with spaces"},
-    {"text": "IBAN GB29NWBK60161331926819, name on account Will Hunter.", "pii": [{"type": "IBAN_CODE", "value": "GB29NWBK60161331926819"}, {"type": "PERSON", "value": "Will Hunter"}], "note": "Name that is also two common words"},
-    {"text": "This is Grace Mills, I'll be in Paris until Friday.", "pii": [{"type": "PERSON", "value": "Grace Mills"}, {"type": "LOCATION", "value": "Paris"}], "note": "Name made of common words"},
-    {"text": "paris jackson here, need help with my account", "pii": [{"type": "PERSON", "value": "paris jackson"}], "note": "Lowercase name that is also a city"},
-    {"text": "hey its mike rodriguez, my email is mike.r@example.org", "pii": [{"type": "PERSON", "value": "mike rodriguez"}, {"type": "EMAIL_ADDRESS", "value": "mike.r@example.org"}], "note": "Lowercase chat-style name"},
-    {"text": "um yeah so my number is uh nine one seven um four four two uh three nine one zero", "pii": [{"type": "PHONE_NUMBER", "value": "nine one seven um four four two uh three nine one zero"}], "note": "Speech-to-text with filler words"},
-    {"text": "Order #4532-8891-2201 shipped. Questions? Email anna.k@example.net.", "pii": [{"type": "EMAIL_ADDRESS", "value": "anna.k@example.net"}], "note": "Order number looks like a card"},
-    {"text": "Tracking ID 1Z999AA10123456784, sent to Rahul Verma.", "pii": [{"type": "PERSON", "value": "Rahul Verma"}], "note": "Tracking ID is not PII"},
-    {"text": "App version 10.2.3.4 crashed when I logged in from 203.0.113.42.", "pii": [{"type": "IP_ADDRESS", "value": "203.0.113.42"}], "note": "Version number looks like an IP"},
-    {"text": "The suspicious login came from 2001:db8:85a3::8a2e:370:7334.", "pii": [{"type": "IP_ADDRESS", "value": "2001:db8:85a3::8a2e:370:7334"}], "note": "IPv6 address"},
-    {"text": "I was born on the 3rd of March, nineteen ninety one.", "pii": [{"type": "DATE_TIME", "value": "the 3rd of March, nineteen ninety one"}], "note": "Date of birth partly in words"},
-    {"text": "DOB 07/04/1988, zip 07302.", "pii": [{"type": "DATE_TIME", "value": "07/04/1988"}], "note": "Short numeric date"},
-    {"text": "reset link was examplebank dot com slash reset, never got the email", "pii": [{"type": "URL", "value": "examplebank dot com slash reset"}], "note": "URL written in words"},
-    {"text": "Go to https://secure.example.com/login?user=dsmith to verify.", "pii": [{"type": "URL", "value": "https://secure.example.com/login?user=dsmith"}], "note": "URL with username in query"},
-    {"text": "cc 4111111111111111 exp 0927 cvv 123", "pii": [{"type": "CREDIT_CARD", "value": "4111111111111111"}], "note": "Compact card details, no spaces"},
-    {"text": "Its Sofia Delgado, sofia delgado, s-o-f-i-a.", "pii": [{"type": "PERSON", "value": "Sofia Delgado"}, {"type": "PERSON", "value": "sofia delgado"}, {"type": "PERSON", "value": "s-o-f-i-a"}], "note": "Name repeated and spelled out"},
-    {"text": "I live at 42 Grove Street, Jersey City, and work in Hoboken.", "pii": [{"type": "LOCATION", "value": "Jersey City"}, {"type": "LOCATION", "value": "Hoboken"}], "note": "Two nearby place names"},
-    {"text": "Agent: name? Caller: Okonkwo. Agent: first name? Caller: Chidi.", "pii": [{"type": "PERSON", "value": "Okonkwo"}, {"type": "PERSON", "value": "Chidi"}], "note": "Single-word names in dialogue"},
-    {"text": "my phone 9175550123 and backup 917 555 0199", "pii": [{"type": "PHONE_NUMBER", "value": "9175550123"}, {"type": "PHONE_NUMBER", "value": "917 555 0199"}], "note": "Unformatted phone numbers"},
-    {"text": "Ticket 2026-10-19-0042 opened for customer Li Wei, li.wei@example.com.", "pii": [{"type": "PERSON", "value": "Li Wei"}, {"type": "EMAIL_ADDRESS", "value": "li.wei@example.com"}], "note": "Ticket ID looks like a date"}
+    {
+      "text": "Sure, I'll call you back at two zero two five five five zero one four seven, Dana.",
+      "pii": [
+        {
+          "type": "PHONE_NUMBER",
+          "value": "two zero two five five five zero one four seven"
+        },
+        {
+          "type": "PERSON",
+          "value": "Dana"
+        }
+      ],
+      "note": "Digits spoken as words with no separators; name is first-name only."
+    },
+    {
+      "text": "The card number is four four four four five five five five three three three three two two two two, and it was charged twice.",
+      "pii": [
+        {
+          "type": "CREDIT_CARD",
+          "value": "four four four four five five five five three three three three two two two two"
+        }
+      ],
+      "note": "Sixteen spoken digits run together with no punctuation or grouping."
+    },
+    {
+      "text": "For verification my social is seven six five four three two one zero one, please confirm the account.",
+      "pii": [
+        {
+          "type": "US_SSN",
+          "value": "seven six five four three two one zero one"
+        }
+      ],
+      "note": "Nine spoken digits look like a phone or account number."
+    },
+    {
+      "text": "Email me at dana dot whitfield at example dot com and check example dot com slash returns for the policy.",
+      "pii": [
+        {
+          "type": "EMAIL_ADDRESS",
+          "value": "dana dot whitfield at example dot com"
+        },
+        {
+          "type": "URL",
+          "value": "example dot com slash returns"
+        }
+      ],
+      "note": "Spoken punctuation words; URL overlaps the email domain text."
+    },
+    {
+      "text": "The modem status page still shows one nine two dot one six eight dot zero dot one as the gateway address.",
+      "pii": [
+        {
+          "type": "IP_ADDRESS",
+          "value": "one nine two dot one six eight dot zero dot one"
+        }
+      ],
+      "note": "Dots spoken as the word dot inside an IP address."
+    },
+    {
+      "text": "My IBAN is G B eight two W E S T one two three four five six seven eight nine zero one two three four, and I'm writing from Tacoma about the refund from march third.",
+      "pii": [
+        {
+          "type": "IBAN_CODE",
+          "value": "G B eight two W E S T one two three four five six seven eight nine zero one two three four"
+        },
+        {
+          "type": "LOCATION",
+          "value": "Tacoma"
+        },
+        {
+          "type": "DATE_TIME",
+          "value": "march third"
+        }
+      ],
+      "note": "Spelled letters mixed with spoken digits in one IBAN run."
+    },
+    {
+      "text": "Hi, my login email is maria.lopez at outlook dot com and I can't reset my password, please help.",
+      "pii": [
+        {
+          "type": "EMAIL_ADDRESS",
+          "value": "maria.lopez at outlook dot com"
+        }
+      ],
+      "note": "Spelled-out email with 'at' and 'dot' evades regex matching."
+    },
+    {
+      "text": "Please check example dot com slash account slash billing, since I was charged on March 3rd.",
+      "pii": [
+        {
+          "type": "URL",
+          "value": "example dot com slash account slash billing"
+        },
+        {
+          "type": "DATE_TIME",
+          "value": "March 3rd"
+        }
+      ],
+      "note": "URL written with 'dot' and 'slash' words instead of symbols."
+    },
+    {
+      "text": "My card is 4111 1111 1111 1111, so please send the receipt to dev_ops at fastmail dot org.",
+      "pii": [
+        {
+          "type": "CREDIT_CARD",
+          "value": "4111 1111 1111 1111"
+        },
+        {
+          "type": "EMAIL_ADDRESS",
+          "value": "dev_ops at fastmail dot org"
+        }
+      ],
+      "note": "Spaced card number plus underscore email with word-based separators."
+    },
+    {
+      "text": "Our server 192.0.2.44 keeps rejecting logins, so contact sam [dot] rivera [at] corpmail [dot] net.",
+      "pii": [
+        {
+          "type": "IP_ADDRESS",
+          "value": "192.0.2.44"
+        },
+        {
+          "type": "EMAIL_ADDRESS",
+          "value": "sam [dot] rivera [at] corpmail [dot] net"
+        }
+      ],
+      "note": "Bracketed separators break the email pattern; IP sits nearby."
+    },
+    {
+      "text": "Please refund to IBAN GB82 WEST 1234 5698 7654 32 for Dana Whitfield, who shipped from Portland Oregon.",
+      "pii": [
+        {
+          "type": "IBAN_CODE",
+          "value": "GB82 WEST 1234 5698 7654 32"
+        },
+        {
+          "type": "PERSON",
+          "value": "Dana Whitfield"
+        },
+        {
+          "type": "LOCATION",
+          "value": "Portland Oregon"
+        }
+      ],
+      "note": "Grouped IBAN with spaces; location lacks comma separator."
+    },
+    {
+      "text": "Verify my identity with SSN 987-65-4321, then open www dot helpdesk-demo dot net slash tickets on 14 June 2024.",
+      "pii": [
+        {
+          "type": "US_SSN",
+          "value": "987-65-4321"
+        },
+        {
+          "type": "URL",
+          "value": "www dot helpdesk-demo dot net slash tickets"
+        },
+        {
+          "type": "DATE_TIME",
+          "value": "14 June 2024"
+        }
+      ],
+      "note": "Mixed SSN and obfuscated URL; hyphenated domain confuses tokenizers."
+    },
+    {
+      "text": "Um, yeah, so this is Dana Whitfield, uh, and my callback number is, um, 555-0142, I think.",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "Dana Whitfield"
+        },
+        {
+          "type": "PHONE_NUMBER",
+          "value": "555-0142"
+        }
+      ],
+      "note": "Filler words separate the name and phone number across clauses."
+    },
+    {
+      "text": "So, uh, the address on file is, um, jordan.blake@example.com, wait, no, sorry, yeah, that one.",
+      "pii": [
+        {
+          "type": "EMAIL_ADDRESS",
+          "value": "jordan.blake@example.com"
+        }
+      ],
+      "note": "Email interrupted by self-correction and pauses mid-sentence."
+    },
+    {
+      "text": "Okay, the card ends in, um, 4111 1111 1111 1111, uh, I think that's right, sorry.",
+      "pii": [
+        {
+          "type": "CREDIT_CARD",
+          "value": "4111 1111 1111 1111"
+        }
+      ],
+      "note": "Space-grouped card digits broken up by filler and hesitation."
+    },
+    {
+      "text": "Um, my social is, uh, 987-65-4320, and, um, I can read the rest if you need it.",
+      "pii": [
+        {
+          "type": "US_SSN",
+          "value": "987-65-4320"
+        }
+      ],
+      "note": "SSN hidden between hesitations that resemble number pauses."
+    },
+    {
+      "text": "I was, uh, at the office on 42 Larkspur Lane, um, on March 3rd, 2024, I think.",
+      "pii": [
+        {
+          "type": "LOCATION",
+          "value": "42 Larkspur Lane"
+        },
+        {
+          "type": "DATE_TIME",
+          "value": "March 3rd, 2024"
+        }
+      ],
+      "note": "Street address and date split by fillers and a trailing hedge."
+    },
+    {
+      "text": "The log shows, um, 203.0.113.42, and, uh, the reset page is, um, https://portal.example.net/reset, so.",
+      "pii": [
+        {
+          "type": "IP_ADDRESS",
+          "value": "203.0.113.42"
+        },
+        {
+          "type": "URL",
+          "value": "https://portal.example.net/reset"
+        }
+      ],
+      "note": "Dotted IP and URL punctuation confused by filler word pauses."
+    },
+    {
+      "text": "Hi, this is Dana Whitfield. My card 4111-1111-1111-1111 was declined twice today.",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "Dana Whitfield"
+        },
+        {
+          "type": "CREDIT_CARD",
+          "value": "4111-1111-1111-1111"
+        }
+      ],
+      "note": "Card number uses dashes instead of spaces across four groups."
+    },
+    {
+      "text": "Please call me at +1 (555) 014-2290 ext. 417 after 3pm on March 3rd.",
+      "pii": [
+        {
+          "type": "PHONE_NUMBER",
+          "value": "+1 (555) 014-2290 ext. 417"
+        },
+        {
+          "type": "DATE_TIME",
+          "value": "March 3rd"
+        }
+      ],
+      "note": "Phone includes country code, parentheses, and an extension suffix."
+    },
+    {
+      "text": "The card on file is 5555 4444 3333 1111, billed to Marcus Oyelaran.",
+      "pii": [
+        {
+          "type": "CREDIT_CARD",
+          "value": "5555 4444 3333 1111"
+        },
+        {
+          "type": "PERSON",
+          "value": "Marcus Oyelaran"
+        }
+      ],
+      "note": "Space-separated card digits mixed with a name in one sentence."
+    },
+    {
+      "text": "I'm writing from Tucson, AZ, and my line is 1-555-0198 x 220 if you need to reach me.",
+      "pii": [
+        {
+          "type": "LOCATION",
+          "value": "Tucson, AZ"
+        },
+        {
+          "type": "PHONE_NUMBER",
+          "value": "1-555-0198 x 220"
+        }
+      ],
+      "note": "Leading 1 with hyphens and a short 'x' extension marker."
+    },
+    {
+      "text": "I typed the Amex number as 3782 822463 10005 on the form, can you check it?",
+      "pii": [
+        {
+          "type": "CREDIT_CARD",
+          "value": "3782 822463 10005"
+        }
+      ],
+      "note": "Fifteen-digit card grouped irregularly as 4-6-5 with spaces."
+    },
+    {
+      "text": "Ticket 88213 from 192.0.2.44 says my account was locked on 2024-11-02, so contact Lee Park at lee.park@example.net.",
+      "pii": [
+        {
+          "type": "IP_ADDRESS",
+          "value": "192.0.2.44"
+        },
+        {
+          "type": "DATE_TIME",
+          "value": "2024-11-02"
+        },
+        {
+          "type": "PERSON",
+          "value": "Lee Park"
+        },
+        {
+          "type": "EMAIL_ADDRESS",
+          "value": "lee.park@example.net"
+        }
+      ],
+      "note": "Several PII types packed into one sentence with a ticket number."
+    },
+    {
+      "text": "Hi, this is Will Hunter calling about my order from March 3rd, 2024. Please call me back at 555-0142.",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "Will Hunter"
+        },
+        {
+          "type": "DATE_TIME",
+          "value": "March 3rd, 2024"
+        },
+        {
+          "type": "PHONE_NUMBER",
+          "value": "555-0142"
+        }
+      ],
+      "note": "'Will' is a common verb, so the name may be missed."
+    },
+    {
+      "text": "Paris Jackson here. The card ending in my account was charged twice, card number 4111 1111 1111 1111.",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "Paris Jackson"
+        },
+        {
+          "type": "CREDIT_CARD",
+          "value": "4111 1111 1111 1111"
+        }
+      ],
+      "note": "'Paris' looks like a city, so it may be tagged as LOCATION."
+    },
+    {
+      "text": "Grace Mills emailed from grace.mills@example.org asking about a refund for last week's delivery.",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "Grace Mills"
+        },
+        {
+          "type": "EMAIL_ADDRESS",
+          "value": "grace.mills@example.org"
+        }
+      ],
+      "note": "'Grace' and 'Mills' are both ordinary words, so context matters."
+    },
+    {
+      "text": "Lisbon Carter says the login page at https://portal.example.net/reset keeps failing for her.",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "Lisbon Carter"
+        },
+        {
+          "type": "URL",
+          "value": "https://portal.example.net/reset"
+        }
+      ],
+      "note": "'Lisbon' is a city name used as a first name."
+    },
+    {
+      "text": "Sierra Dean reports unusual sign-ins from 203.0.113.42 late last night, so please review the account.",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "Sierra Dean"
+        },
+        {
+          "type": "IP_ADDRESS",
+          "value": "203.0.113.42"
+        }
+      ],
+      "note": "'Sierra' is a place name and a common word, and 'Dean' is also a title."
+    },
+    {
+      "text": "Florence Ward asked us to update her file; the SSN on record is 987-65-4321 and her IBAN is GB82WEST12345698765432.",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "Florence Ward"
+        },
+        {
+          "type": "US_SSN",
+          "value": "987-65-4321"
+        },
+        {
+          "type": "IBAN_CODE",
+          "value": "GB82WEST12345698765432"
+        }
+      ],
+      "note": "'Florence' is a city, and 'Ward' is also a common noun."
+    },
+    {
+      "text": "Hi, this is Priya Venkataraman. Please call me back on 07700 900123 about my account.",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "Priya Venkataraman"
+        },
+        {
+          "type": "PHONE_NUMBER",
+          "value": "07700 900123"
+        }
+      ],
+      "note": "UK mobile number with a space inside the number group."
+    },
+    {
+      "text": "My IBAN is GB29 NWBK 6016 1331 9268 19, so please refund the £40 to that account by Friday 14 March 2025.",
+      "pii": [
+        {
+          "type": "IBAN_CODE",
+          "value": "GB29 NWBK 6016 1331 9268 19"
+        },
+        {
+          "type": "DATE_TIME",
+          "value": "Friday 14 March 2025"
+        }
+      ],
+      "note": "Grouped IBAN with spaces; currency symbol sits nearby as a distractor."
+    },
+    {
+      "text": "Please send the replacement parcel to 12 Rue de la Paix, 75002 Paris, France, c/o Lucien Moreau.",
+      "pii": [
+        {
+          "type": "LOCATION",
+          "value": "12 Rue de la Paix, 75002 Paris, France"
+        },
+        {
+          "type": "PERSON",
+          "value": "Lucien Moreau"
+        }
+      ],
+      "note": "French address puts postcode before city; c/o line adds a name."
+    },
+    {
+      "text": "Our German customer Hanna Schulz wrote from Hauptstraße 45, 10117 Berlin, asking about DE89 3704 0044 0532 0130 00 transfers.",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "Hanna Schulz"
+        },
+        {
+          "type": "LOCATION",
+          "value": "Hauptstraße 45, 10117 Berlin"
+        },
+        {
+          "type": "IBAN_CODE",
+          "value": "DE89 3704 0044 0532 0130 00"
+        }
+      ],
+      "note": "Non-ASCII umlaut in street name; three PII types in one sentence."
+    },
+    {
+      "text": "Reach me at j.okafor@example-mail.co.uk or +44 20 7946 0958 after 9am on 3 June.",
+      "pii": [
+        {
+          "type": "EMAIL_ADDRESS",
+          "value": "j.okafor@example-mail.co.uk"
+        },
+        {
+          "type": "PHONE_NUMBER",
+          "value": "+44 20 7946 0958"
+        },
+        {
+          "type": "DATE_TIME",
+          "value": "3 June"
+        }
+      ],
+      "note": "International +44 format with a multi-part UK email domain."
+    },
+    {
+      "text": "Login from 198.51.100.23 failed for ES91 2100 0418 4502 0005 1332, can you check the account linked to Calle Mayor 8, 28013 Madrid?",
+      "pii": [
+        {
+          "type": "IP_ADDRESS",
+          "value": "198.51.100.23"
+        },
+        {
+          "type": "IBAN_CODE",
+          "value": "ES91 2100 0418 4502 0005 1332"
+        },
+        {
+          "type": "LOCATION",
+          "value": "Calle Mayor 8, 28013 Madrid"
+        }
+      ],
+      "note": "Spanish IBAN and address mixed with an IP address in one message."
+    },
+    {
+      "text": "hey its marisol quintero, i cant log in, my email is mq.test@example.com can u reset it pls",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "marisol quintero"
+        },
+        {
+          "type": "EMAIL_ADDRESS",
+          "value": "mq.test@example.com"
+        }
+      ],
+      "note": "Lowercase name with no capitals; email embedded mid-sentence with typos."
+    },
+    {
+      "text": "hi i called yesterday at 555-019-2834 and nobdy picked up, can someone call bak",
+      "pii": [
+        {
+          "type": "PHONE_NUMBER",
+          "value": "555-019-2834"
+        }
+      ],
+      "note": "Phone number follows a lowercase run-on message with typos."
+    },
+    {
+      "text": "i think i typed my card wrong, its 4111 1111 1111 1111 and ssn on file is 000-12-3456 so pls check",
+      "pii": [
+        {
+          "type": "CREDIT_CARD",
+          "value": "4111 1111 1111 1111"
+        },
+        {
+          "type": "US_SSN",
+          "value": "000-12-3456"
+        }
+      ],
+      "note": "Two sensitive numeric IDs in one casual message; spacing matters."
+    },
+    {
+      "text": "getting errors from 192.0.2.47 when i open https://example.com/acct/778 since morning, help",
+      "pii": [
+        {
+          "type": "IP_ADDRESS",
+          "value": "192.0.2.47"
+        },
+        {
+          "type": "URL",
+          "value": "https://example.com/acct/778"
+        }
+      ],
+      "note": "IP and URL both lowercase; URL ends mid-sentence with no punctuation."
+    },
+    {
+      "text": "my refund went to iban DE89 3704 0044 0532 0130 00 but i live in springfield so idk whats going on",
+      "pii": [
+        {
+          "type": "IBAN_CODE",
+          "value": "DE89 3704 0044 0532 0130 00"
+        },
+        {
+          "type": "LOCATION",
+          "value": "springfield"
+        }
+      ],
+      "note": "Spaced IBAN and lowercase city name that also reads as a common word."
+    },
+    {
+      "text": "dev patel here, wanna cancel my order from 03/14/2031 asap thx",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "dev patel"
+        },
+        {
+          "type": "DATE_TIME",
+          "value": "03/14/2031"
+        }
+      ],
+      "note": "Name and date are short, casual, and easy to miss in context."
+    },
+    {
+      "text": "Hi, this is Dana Whitfield. My order #48213907 shipped, but tracking 1Z999AA10123456784 has shown no updates.",
+      "pii": [
+        {
+          "type": "PERSON",
+          "value": "Dana Whitfield"
+        }
+      ],
+      "note": "Order and tracking numbers look like account or card digits."
+    },
+    {
+      "text": "Firmware v2.14.3-build.8841 keeps failing, so I'm writing from jordan.reyes@example.org.",
+      "pii": [
+        {
+          "type": "EMAIL_ADDRESS",
+          "value": "jordan.reyes@example.org"
+        }
+      ],
+      "note": "Build version digits resemble phone numbers or IDs."
+    },
+    {
+      "text": "Ticket REF-20417 was opened on 03/14/2024, and my callback number is (555) 010-2398.",
+      "pii": [
+        {
+          "type": "DATE_TIME",
+          "value": "03/14/2024"
+        },
+        {
+          "type": "PHONE_NUMBER",
+          "value": "(555) 010-2398"
+        }
+      ],
+      "note": "Ticket reference and date-like digits mix with a real phone."
+    },
+    {
+      "text": "The refund for case 7731-B went to card 4111 1111 1111 1111, and the amount was $58.20.",
+      "pii": [
+        {
+          "type": "CREDIT_CARD",
+          "value": "4111 1111 1111 1111"
+        }
+      ],
+      "note": "Case number and amount resemble card digits; only the card is PII."
+    },
+    {
+      "text": "My router at 198.51.100.23 is down, while SKU 192-0-2-55 and firmware 4.5.1 are unrelated.",
+      "pii": [
+        {
+          "type": "IP_ADDRESS",
+          "value": "198.51.100.23"
+        }
+      ],
+      "note": "Dotted SKU and firmware numbers resemble IP addresses."
+    },
+    {
+      "text": "Please check https://example.com/track?id=88213 for my parcel, which is being delivered to Leeds.",
+      "pii": [
+        {
+          "type": "URL",
+          "value": "https://example.com/track?id=88213"
+        },
+        {
+          "type": "LOCATION",
+          "value": "Leeds"
+        }
+      ],
+      "note": "Tracking ID is a decoy inside a URL that is itself PII."
+    }
   ]
 }

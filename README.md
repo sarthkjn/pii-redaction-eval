@@ -27,12 +27,16 @@ Engine: [Microsoft Presidio](https://github.com/microsoft/presidio) with spaCy `
 |---|---|---:|---:|---:|---:|---:|
 | synthetic (300 samples) | baseline | 75.6% | 97.3% | 85.1% | 15 | 175 |
 | synthetic (300 samples) | **improved** | **99.5%** | **98.9%** | **99.2%** | 6 | 3 |
-| edge cases (30 samples) | baseline | 57.1% | 60.0% | 58.5% | 16 | 18 |
-| edge cases (30 samples) | **improved** | **82.0%** | **80.0%** | **81.0%** | 8 | 7 |
+| held-out edge cases (48, Claude-generated) | baseline | 65.7% | 76.3% | 70.6% | 22 | 37 |
+| held-out edge cases (48, Claude-generated) | **improved** | **89.1%** | **88.2%** | **88.6%** | 11 | 10 |
+| seed edge cases (30, hand-written) | baseline | 57.1% | 60.0% | 58.5% | 16 | 18 |
+| seed edge cases (30, hand-written) | improved | 82.0% | 80.0% | 81.0% | 8 | 7 |
+
+The custom fixes were designed while looking at the seed set. The held-out set was generated afterwards with Claude Haiku and never used to tune the engine, so it is the fair measure.
 
 ### What the evaluation found
 
-* **Clean text hides the problem.** The baseline catches 97% of PII in neatly formatted text but only 60% in realistic, messy input. Testing only on clean data would give a false sense of safety.
+* **Clean text hides the problem.** The baseline catches 97% of PII in neatly formatted text but only 76% on held-out realistic input (spoken numbers, spelled-out emails, typos). Testing only on clean data would give a false sense of safety.
 * **Newer Mastercard numbers leak.** Presidio's card pattern does not cover Mastercard's 2221–2720 range, so valid cards starting with "2" were missed entirely.
 * **Voice transcripts break pattern matching.** "four one one one…" or "priya dot shah at gmail dot com" pass straight through, because the recognizers look for digits and `@`.
 * **Most false alarms come from overlapping guesses.** The language model labels pieces of phone numbers and SSNs as dates, the domain inside every email as a URL, and phrases like "last year" as personal data.
@@ -166,7 +170,7 @@ curl -X POST http://127.0.0.1:8000/redact \
 
 ### 4. Generate new edge cases with Claude (optional)
 
-The repo ships with a 30-case hand-written seed set in `data/edge_cases.json`. To generate a larger, fresh set with Claude:
+`data/edge_cases.json` holds 48 cases generated with Claude Haiku: the held-out set. The original 30 hand-written cases are kept in `data/edge_cases_seed.json`. To generate a fresh set (this overwrites `edge_cases.json`):
 
 ```bash
 cp .env.example .env          # then paste your ANTHROPIC_API_KEY into .env
@@ -238,8 +242,8 @@ pii-redaction-eval/
 
 ## Limitations and honest caveats
 
-* **The edge-case improvement is optimistic.** The custom recognizers were written after looking at failures in the seed set, so the 58% → 81% gain is measured partly on data that shaped the fix. The fair test is a **fresh, held-out** set: generate one with `scripts/generate_edge_cases.py` and re-run. The synthetic results do not have this problem, since the templates came first.
-* **30 edge cases is small.** Per-type numbers on that set move a lot with one or two examples.
+* **Held-out, but same categories.** The held-out set is new data the fixes never saw, and the improved engine still gains 18 points of F1 (70.6% → 88.6%). But Claude generated it from the same 8 categories as the seed set, so it shows the fixes generalize within those kinds of input, not to entirely new ones.
+* **48 edge cases is still small.** Per-type numbers move noticeably with one or two examples; treat them as directional.
 * **Names are the weakest type.** The small spaCy model misses lowercase names, common-word names and single names. A larger model (`en_core_web_lg`) or a transformer NER model should help; changing `SPACY_MODEL` in `app/config.py` is the only code change needed.
 * **Overlap matching is lenient.** A detection that covers only part of a value counts as found, even though the uncovered part may still leak. A stricter "fraction of PII characters masked" metric would be a useful addition.
 * **English and US formats** are the focus. The IBAN and UK phone cases are a start, not full international coverage.
@@ -248,7 +252,7 @@ pii-redaction-eval/
 
 - [ ] Character-level leak metric alongside entity-level recall
 - [ ] Compare spaCy `sm` vs `lg` vs a transformer model in the dashboard
-- [ ] Held-out edge-case set generated with Claude, reported separately from the seed set
+- [x] Held-out edge-case set
 - [ ] Docker image and a hosted demo
 
 ## License

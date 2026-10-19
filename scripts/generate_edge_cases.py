@@ -88,13 +88,15 @@ def generate(per_category: int, model: str) -> list[dict]:
         print(f"[{i}/{len(CATEGORIES)}] {category[:60]}...")
         message = client.messages.create(
             model=model,
-            max_tokens=2000,
+            max_tokens=4000,
             system=SYSTEM,
             messages=[{"role": "user", "content": PROMPT.format(
                 n=per_category, category=category, types=", ".join(ENTITY_TYPES))}],
         )
+                # The reply can contain several blocks (e.g. reasoning, then the answer); keep only text.
+        reply = "".join(block.text for block in message.content if block.type == "text")
         try:
-            batch = _parse_json(message.content[0].text).get("cases", [])
+            batch = _parse_json(reply).get("cases", [])
         except (ValueError, json.JSONDecodeError) as exc:
             print(f"   skipped: could not parse reply ({exc})")
             continue
