@@ -1,0 +1,1017 @@
+[
+  {
+    "engine": "baseline",
+    "dataset": "synthetic",
+    "n_samples": 300,
+    "seconds": 2.47,
+    "overall": {
+      "precision": 0.7563,
+      "recall": 0.9731,
+      "f1": 0.8511,
+      "tp": 543,
+      "fp": 175,
+      "fn": 15
+    },
+    "per_type": [
+      {
+        "entity_type": "CREDIT_CARD",
+        "tp": 38,
+        "fp": 0,
+        "fn": 9,
+        "support": 47,
+        "precision": 1.0,
+        "recall": 0.8085,
+        "f1": 0.8941
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "tp": 90,
+        "fp": 101,
+        "fn": 0,
+        "support": 90,
+        "precision": 0.4712,
+        "recall": 1.0,
+        "f1": 0.6406
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "tp": 57,
+        "fp": 0,
+        "fn": 0,
+        "support": 57,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "IBAN_CODE",
+        "tp": 24,
+        "fp": 0,
+        "fn": 0,
+        "support": 24,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "IP_ADDRESS",
+        "tp": 42,
+        "fp": 0,
+        "fn": 0,
+        "support": 42,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "LOCATION",
+        "tp": 74,
+        "fp": 3,
+        "fn": 0,
+        "support": 74,
+        "precision": 0.961,
+        "recall": 1.0,
+        "f1": 0.9801
+      },
+      {
+        "entity_type": "PERSON",
+        "tp": 95,
+        "fp": 0,
+        "fn": 6,
+        "support": 101,
+        "precision": 1.0,
+        "recall": 0.9406,
+        "f1": 0.9694
+      },
+      {
+        "entity_type": "PHONE_NUMBER",
+        "tp": 42,
+        "fp": 14,
+        "fn": 0,
+        "support": 42,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571
+      },
+      {
+        "entity_type": "URL",
+        "tp": 39,
+        "fp": 57,
+        "fn": 0,
+        "support": 39,
+        "precision": 0.4062,
+        "recall": 1.0,
+        "f1": 0.5777
+      },
+      {
+        "entity_type": "US_SSN",
+        "tp": 42,
+        "fp": 0,
+        "fn": 0,
+        "support": 42,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    ],
+    "misses": [
+      {
+        "entity_type": "CREDIT_CARD",
+        "value": "2720325288095702",
+        "text": "My wife Elizabeth Fowler and I both use the card 2720325288095702.",
+        "note": ""
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Jordan York",
+        "text": "My name is Jordan York, I moved to Berlin last year and need to update my address.",
+        "note": ""
+      },
+      {
+        "entity_type": "CREDIT_CARD",
+        "value": "2259894134352400",
+        "text": "I was charged twice on September 11, 2012. The card was 2259894134352400.",
+        "note": ""
+      },
+      {
+        "entity_type": "CREDIT_CARD",
+        "value": "2295780913431612",
+        "text": "I was charged twice on June 04, 2019. The card was 2295780913431612.",
+        "note": ""
+      },
+      {
+        "entity_type": "CREDIT_CARD",
+        "value": "2286238692221960",
+        "text": "I was charged twice on August 02, 1995. The card was 2286238692221960.",
+        "note": ""
+      },
+      {
+        "entity_type": "CREDIT_CARD",
+        "value": "2702175946474365",
+        "text": "Hi, this is Robert Santana calling about my card ending, the full number is 2702175946474365.",
+        "note": ""
+      },
+      {
+        "entity_type": "CREDIT_CARD",
+        "value": "2483908470076619",
+        "text": "I was charged twice on August 22, 1961. The card was 2483908470076619.",
+        "note": ""
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Shane Pugh",
+        "text": "Hello Shane Pugh, we noticed a sign-in from 160.210.185.30 on December 11, 1985.",
+        "note": ""
+      },
+      {
+        "entity_type": "CREDIT_CARD",
+        "value": "2253815614978402",
+        "text": "Hi, this is Karla Ramos calling about my card ending, the full number is 2253815614978402.",
+        "note": ""
+      },
+      {
+        "entity_type": "CREDIT_CARD",
+        "value": "2626137506068535",
+        "text": "I was charged twice on December 13, 2007. The card was 2626137506068535.",
+        "note": ""
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Kimberly Acosta",
+        "text": "Hi, this is Kimberly Acosta calling about my card ending, the full number is 4143410369711792.",
+        "note": ""
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Jacqueline Hines",
+        "text": "Callback number is 917-668-0006. Ask for Jacqueline Hines.",
+        "note": ""
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Sheena Guerra",
+        "text": "Hi, this is Sheena Guerra calling about my card ending, the full number is 4422535841438424.",
+        "note": ""
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Marcus Winters",
+        "text": "Hello Marcus Winters, we noticed a sign-in from 160.168.187.91 on August 29, 1950.",
+        "note": ""
+      },
+      {
+        "entity_type": "CREDIT_CARD",
+        "value": "2252199330833014",
+        "text": "My wife Joshua Fitzpatrick and I both use the card 2252199330833014.",
+        "note": ""
+      }
+    ],
+    "false_alarms": [
+      {
+        "entity_type": "URL",
+        "value": "example.net",
+        "text": "Sure, my email is jeffreydoyle@example.net and you can reach me at 201.633.2286."
+      },
+      {
+        "entity_type": "URL",
+        "value": "example.org",
+        "text": "Sure, my email is garzaanthony@example.org and you can reach me at (973) 396-0520."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "396-0520",
+        "text": "Sure, my email is garzaanthony@example.org and you can reach me at (973) 396-0520."
+      },
+      {
+        "entity_type": "URL",
+        "value": "example.net",
+        "text": "Sure, my email is jesseguzman@example.net and you can reach me at 312.589.0434."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "312.589.0434",
+        "text": "Sure, my email is jesseguzman@example.net and you can reach me at 312.589.0434."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "last year",
+        "text": "My name is Matthew Gardner, I moved to Berlin last year and need to update my address."
+      },
+      {
+        "entity_type": "PHONE_NUMBER",
+        "value": "122.57.188.12",
+        "text": "The login came from IP 122.57.188.12, which isn't mine. I live in Seattle."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "last year",
+        "text": "My name is Mark Mcclure, I moved to Miami last year and need to update my address."
+      },
+      {
+        "entity_type": "URL",
+        "value": "example.net",
+        "text": "Sure, my email is barbara10@example.net and you can reach me at 212.815.5635."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "4131647525534196",
+        "text": "I was charged twice on October 24, 1977. The card was 4131647525534196."
+      },
+      {
+        "entity_type": "PHONE_NUMBER",
+        "value": "142.14.44.201",
+        "text": "Hello Kimberly Sanchez, we noticed a sign-in from 142.14.44.201 on December 07, 1990."
+      },
+      {
+        "entity_type": "URL",
+        "value": "example.com",
+        "text": "Sure, my email is wendytaylor@example.com and you can reach me at 617.384.5925."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "last year",
+        "text": "My name is Anthony Rodriguez, I moved to Hoboken last year and need to update my address."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "346697848018459",
+        "text": "Hi, this is Rebecca Henderson calling about my card ending, the full number is 346697848018459."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "last year",
+        "text": "My name is Jeffrey Chavez, I moved to Atlanta last year and need to update my address."
+      },
+      {
+        "entity_type": "URL",
+        "value": "example.org",
+        "text": "Sure, my email is teresa28@example.org and you can reach me at 312.364.7428."
+      },
+      {
+        "entity_type": "URL",
+        "value": "example.org",
+        "text": "Please send the statement to brianhumphrey@example.org, attention John Jones."
+      },
+      {
+        "entity_type": "URL",
+        "value": "example.net",
+        "text": "Please send the statement to davidalvarez@example.net, attention Joseph Obrien."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "last year",
+        "text": "My name is Tanya Campos, I moved to Denver last year and need to update my address."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "201.192.157.78",
+        "text": "Hello Michelle Ross, we noticed a sign-in from 201.192.157.78 on March 28, 2017."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "next week",
+        "text": "I'm travelling to Hoboken next week, please don't block my card."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "next week",
+        "text": "I'm travelling to Berlin next week, please don't block my card."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "last year",
+        "text": "My name is Adrienne Zimmerman, I moved to Miami last year and need to update my address."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "4183473829973767",
+        "text": "My wife Austin Johnson and I both use the card 4183473829973767."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "last year",
+        "text": "My name is Brent Jordan, I moved to Newark last year and need to update my address."
+      }
+    ]
+  },
+  {
+    "engine": "improved",
+    "dataset": "synthetic",
+    "n_samples": 300,
+    "seconds": 2.16,
+    "overall": {
+      "precision": 0.9946,
+      "recall": 0.9892,
+      "f1": 0.9919,
+      "tp": 552,
+      "fp": 3,
+      "fn": 6
+    },
+    "per_type": [
+      {
+        "entity_type": "CREDIT_CARD",
+        "tp": 47,
+        "fp": 0,
+        "fn": 0,
+        "support": 47,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "tp": 90,
+        "fp": 0,
+        "fn": 0,
+        "support": 90,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "tp": 57,
+        "fp": 0,
+        "fn": 0,
+        "support": 57,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "IBAN_CODE",
+        "tp": 24,
+        "fp": 0,
+        "fn": 0,
+        "support": 24,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "IP_ADDRESS",
+        "tp": 42,
+        "fp": 0,
+        "fn": 0,
+        "support": 42,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "LOCATION",
+        "tp": 74,
+        "fp": 3,
+        "fn": 0,
+        "support": 74,
+        "precision": 0.961,
+        "recall": 1.0,
+        "f1": 0.9801
+      },
+      {
+        "entity_type": "PERSON",
+        "tp": 95,
+        "fp": 0,
+        "fn": 6,
+        "support": 101,
+        "precision": 1.0,
+        "recall": 0.9406,
+        "f1": 0.9694
+      },
+      {
+        "entity_type": "PHONE_NUMBER",
+        "tp": 42,
+        "fp": 0,
+        "fn": 0,
+        "support": 42,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "URL",
+        "tp": 39,
+        "fp": 0,
+        "fn": 0,
+        "support": 39,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "US_SSN",
+        "tp": 42,
+        "fp": 0,
+        "fn": 0,
+        "support": 42,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    ],
+    "misses": [
+      {
+        "entity_type": "PERSON",
+        "value": "Jordan York",
+        "text": "My name is Jordan York, I moved to Berlin last year and need to update my address.",
+        "note": ""
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Shane Pugh",
+        "text": "Hello Shane Pugh, we noticed a sign-in from 160.210.185.30 on December 11, 1985.",
+        "note": ""
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Kimberly Acosta",
+        "text": "Hi, this is Kimberly Acosta calling about my card ending, the full number is 4143410369711792.",
+        "note": ""
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Jacqueline Hines",
+        "text": "Callback number is 917-668-0006. Ask for Jacqueline Hines.",
+        "note": ""
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Sheena Guerra",
+        "text": "Hi, this is Sheena Guerra calling about my card ending, the full number is 4422535841438424.",
+        "note": ""
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Marcus Winters",
+        "text": "Hello Marcus Winters, we noticed a sign-in from 160.168.187.91 on August 29, 1950.",
+        "note": ""
+      }
+    ],
+    "false_alarms": [
+      {
+        "entity_type": "LOCATION",
+        "value": "lauren13@example.org",
+        "text": "You can find the dispute form at https://jenkins-shields.com/tags/tags/app or email lauren13@example.org."
+      },
+      {
+        "entity_type": "LOCATION",
+        "value": "Jordan York",
+        "text": "My name is Jordan York, I moved to Berlin last year and need to update my address."
+      },
+      {
+        "entity_type": "LOCATION",
+        "value": "gregory40@example.org",
+        "text": "You can find the dispute form at https://bell-hicks.net/explore/main or email gregory40@example.org."
+      }
+    ]
+  },
+  {
+    "engine": "baseline",
+    "dataset": "edge_cases",
+    "n_samples": 30,
+    "seconds": 0.17,
+    "overall": {
+      "precision": 0.5714,
+      "recall": 0.6,
+      "f1": 0.5854,
+      "tp": 24,
+      "fp": 18,
+      "fn": 16
+    },
+    "per_type": [
+      {
+        "entity_type": "CREDIT_CARD",
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "support": 4,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "tp": 2,
+        "fp": 11,
+        "fn": 0,
+        "support": 2,
+        "precision": 0.1538,
+        "recall": 1.0,
+        "f1": 0.2666
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "tp": 3,
+        "fp": 0,
+        "fn": 2,
+        "support": 5,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.75
+      },
+      {
+        "entity_type": "IBAN_CODE",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "support": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "IP_ADDRESS",
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "support": 2,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      {
+        "entity_type": "LOCATION",
+        "tp": 4,
+        "fp": 2,
+        "fn": 0,
+        "support": 4,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      {
+        "entity_type": "PERSON",
+        "tp": 3,
+        "fp": 1,
+        "fn": 8,
+        "support": 11,
+        "precision": 0.75,
+        "recall": 0.2727,
+        "f1": 0.4
+      },
+      {
+        "entity_type": "PHONE_NUMBER",
+        "tp": 4,
+        "fp": 0,
+        "fn": 2,
+        "support": 6,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8
+      },
+      {
+        "entity_type": "URL",
+        "tp": 1,
+        "fp": 3,
+        "fn": 1,
+        "support": 2,
+        "precision": 0.25,
+        "recall": 0.5,
+        "f1": 0.3333
+      },
+      {
+        "entity_type": "US_SSN",
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "support": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6667
+      }
+    ],
+    "misses": [
+      {
+        "entity_type": "CREDIT_CARD",
+        "value": "four one one one one one one one one one one one one one one one",
+        "text": "my card number is four one one one one one one one one one one one one one one one",
+        "note": "Card number spoken as words"
+      },
+      {
+        "entity_type": "PHONE_NUMBER",
+        "value": "two one two, five five five, zero one four seven",
+        "text": "you can call me at two one two, five five five, zero one four seven",
+        "note": "Phone number spoken as words"
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "value": "priya dot shah at gmail dot com",
+        "text": "email me at priya dot shah at gmail dot com",
+        "note": "Email written out in words"
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "value": "jdoe88 at outlook dot com",
+        "text": "it's jdoe88 at outlook dot com, all lowercase",
+        "note": "Spoken email, no name"
+      },
+      {
+        "entity_type": "CREDIT_CARD",
+        "value": "2223 0031 2200 3222",
+        "text": "Use my Mastercard 2223 0031 2200 3222 for the refund.",
+        "note": "Newer 2-series Mastercard range"
+      },
+      {
+        "entity_type": "US_SSN",
+        "value": "five three six, two two, one eight four seven",
+        "text": "ssn five three six, two two, one eight four seven",
+        "note": "SSN spoken as words"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Grace Mills",
+        "text": "This is Grace Mills, I'll be in Paris until Friday.",
+        "note": "Name made of common words"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "paris jackson",
+        "text": "paris jackson here, need help with my account",
+        "note": "Lowercase name that is also a city"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "mike rodriguez",
+        "text": "hey its mike rodriguez, my email is mike.r@example.org",
+        "note": "Lowercase chat-style name"
+      },
+      {
+        "entity_type": "PHONE_NUMBER",
+        "value": "nine one seven um four four two uh three nine one zero",
+        "text": "um yeah so my number is uh nine one seven um four four two uh three nine one zero",
+        "note": "Speech-to-text with filler words"
+      },
+      {
+        "entity_type": "URL",
+        "value": "examplebank dot com slash reset",
+        "text": "reset link was examplebank dot com slash reset, never got the email",
+        "note": "URL written in words"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Sofia Delgado",
+        "text": "Its Sofia Delgado, sofia delgado, s-o-f-i-a.",
+        "note": "Name repeated and spelled out"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "sofia delgado",
+        "text": "Its Sofia Delgado, sofia delgado, s-o-f-i-a.",
+        "note": "Name repeated and spelled out"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "s-o-f-i-a",
+        "text": "Its Sofia Delgado, sofia delgado, s-o-f-i-a.",
+        "note": "Name repeated and spelled out"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Okonkwo",
+        "text": "Agent: name? Caller: Okonkwo. Agent: first name? Caller: Chidi.",
+        "note": "Single-word names in dialogue"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Chidi",
+        "text": "Agent: name? Caller: Okonkwo. Agent: first name? Caller: Chidi.",
+        "note": "Single-word names in dialogue"
+      }
+    ],
+    "false_alarms": [
+      {
+        "entity_type": "PERSON",
+        "value": "jdoe88",
+        "text": "it's jdoe88 at outlook dot com, all lowercase"
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "5555-5555-5555-4444",
+        "text": "The card is 5555-5555-5555-4444 and it expires next month."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "next month",
+        "text": "The card is 5555-5555-5555-4444 and it expires next month."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "2223 0031 2200 3222",
+        "text": "Use my Mastercard 2223 0031 2200 3222 for the refund."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "22 1847",
+        "text": "Social is 536 22 1847, no dashes."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "555-0182",
+        "text": "My direct line is (973) 555-0182 ext. 214."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "Friday",
+        "text": "This is Grace Mills, I'll be in Paris until Friday."
+      },
+      {
+        "entity_type": "LOCATION",
+        "value": "paris",
+        "text": "paris jackson here, need help with my account"
+      },
+      {
+        "entity_type": "URL",
+        "value": "example.org",
+        "text": "hey its mike rodriguez, my email is mike.r@example.org"
+      },
+      {
+        "entity_type": "URL",
+        "value": "example.net",
+        "text": "Order #4532-8891-2201 shipped. Questions? Email anna.k@example.net."
+      },
+      {
+        "entity_type": "IP_ADDRESS",
+        "value": "10.2.3.4",
+        "text": "App version 10.2.3.4 crashed when I logged in from 203.0.113.42."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "2001",
+        "text": "The suspicious login came from 2001:db8:85a3::8a2e:370:7334."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "07302",
+        "text": "DOB 07/04/1988, zip 07302."
+      },
+      {
+        "entity_type": "LOCATION",
+        "value": "Okonkwo",
+        "text": "Agent: name? Caller: Okonkwo. Agent: first name? Caller: Chidi."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "9175550123",
+        "text": "my phone 9175550123 and backup 917 555 0199"
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "2026-10-19",
+        "text": "Ticket 2026-10-19-0042 opened for customer Li Wei, li.wei@example.com."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "10-19-0042",
+        "text": "Ticket 2026-10-19-0042 opened for customer Li Wei, li.wei@example.com."
+      },
+      {
+        "entity_type": "URL",
+        "value": "example.com",
+        "text": "Ticket 2026-10-19-0042 opened for customer Li Wei, li.wei@example.com."
+      }
+    ]
+  },
+  {
+    "engine": "improved",
+    "dataset": "edge_cases",
+    "n_samples": 30,
+    "seconds": 0.18,
+    "overall": {
+      "precision": 0.8205,
+      "recall": 0.8,
+      "f1": 0.8101,
+      "tp": 32,
+      "fp": 7,
+      "fn": 8
+    },
+    "per_type": [
+      {
+        "entity_type": "CREDIT_CARD",
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "support": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "tp": 2,
+        "fp": 3,
+        "fn": 0,
+        "support": 2,
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714
+      },
+      {
+        "entity_type": "EMAIL_ADDRESS",
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "support": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "IBAN_CODE",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "support": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "IP_ADDRESS",
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "support": 2,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      {
+        "entity_type": "LOCATION",
+        "tp": 4,
+        "fp": 2,
+        "fn": 0,
+        "support": 4,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8
+      },
+      {
+        "entity_type": "PERSON",
+        "tp": 3,
+        "fp": 1,
+        "fn": 8,
+        "support": 11,
+        "precision": 0.75,
+        "recall": 0.2727,
+        "f1": 0.4
+      },
+      {
+        "entity_type": "PHONE_NUMBER",
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "support": 6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "URL",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "support": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "entity_type": "US_SSN",
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "support": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    ],
+    "misses": [
+      {
+        "entity_type": "PERSON",
+        "value": "Grace Mills",
+        "text": "This is Grace Mills, I'll be in Paris until Friday.",
+        "note": "Name made of common words"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "paris jackson",
+        "text": "paris jackson here, need help with my account",
+        "note": "Lowercase name that is also a city"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "mike rodriguez",
+        "text": "hey its mike rodriguez, my email is mike.r@example.org",
+        "note": "Lowercase chat-style name"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Sofia Delgado",
+        "text": "Its Sofia Delgado, sofia delgado, s-o-f-i-a.",
+        "note": "Name repeated and spelled out"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "sofia delgado",
+        "text": "Its Sofia Delgado, sofia delgado, s-o-f-i-a.",
+        "note": "Name repeated and spelled out"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "s-o-f-i-a",
+        "text": "Its Sofia Delgado, sofia delgado, s-o-f-i-a.",
+        "note": "Name repeated and spelled out"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Okonkwo",
+        "text": "Agent: name? Caller: Okonkwo. Agent: first name? Caller: Chidi.",
+        "note": "Single-word names in dialogue"
+      },
+      {
+        "entity_type": "PERSON",
+        "value": "Chidi",
+        "text": "Agent: name? Caller: Okonkwo. Agent: first name? Caller: Chidi.",
+        "note": "Single-word names in dialogue"
+      }
+    ],
+    "false_alarms": [
+      {
+        "entity_type": "PERSON",
+        "value": "jdoe88",
+        "text": "it's jdoe88 at outlook dot com, all lowercase"
+      },
+      {
+        "entity_type": "LOCATION",
+        "value": "paris",
+        "text": "paris jackson here, need help with my account"
+      },
+      {
+        "entity_type": "IP_ADDRESS",
+        "value": "10.2.3.4",
+        "text": "App version 10.2.3.4 crashed when I logged in from 203.0.113.42."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "07302",
+        "text": "DOB 07/04/1988, zip 07302."
+      },
+      {
+        "entity_type": "LOCATION",
+        "value": "Okonkwo",
+        "text": "Agent: name? Caller: Okonkwo. Agent: first name? Caller: Chidi."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "2026-10-19",
+        "text": "Ticket 2026-10-19-0042 opened for customer Li Wei, li.wei@example.com."
+      },
+      {
+        "entity_type": "DATE_TIME",
+        "value": "10-19-0042",
+        "text": "Ticket 2026-10-19-0042 opened for customer Li Wei, li.wei@example.com."
+      }
+    ]
+  }
+]
